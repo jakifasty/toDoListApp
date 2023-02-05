@@ -39,8 +39,10 @@ function App() {
     todoNameRef.current.value = null //we remove the inputed value to the already set Todo
   }
 
-  function handleRemoveComplete(e) {
-
+  function handleRemoveComplete() {
+    const newTodosList = todos.filter(todo => !todo.complete) //get new todo list by keeping
+    // those todo that are not completed 
+    setTodos(newTodosList)
   }
   
   return ( //ToDoList is a React embedded component
