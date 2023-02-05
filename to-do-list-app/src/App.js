@@ -3,7 +3,7 @@ import ToDoList from './TodoList'
 import './style.css'
 import { v4 as uuidv4 } from 'uuid';
 
-const LOCAL_STORAGE_KEY ='todoApp.todos'
+const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
 function App() {
 
@@ -12,12 +12,16 @@ function App() {
 
   //this loadEeffect reloads our Todos
   useEffect(() => {
+    console.log(localStorage)
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-    if (storedTodos) {setTodos(storedTodos)}
+    if (storedTodos) {setTodos(prevTodos => 
+      [...prevTodos, ...storedTodos]
+    )}
   }, [])
 
   //this allows to persist page reaload and keep local storage saved
   useEffect(() => {
+    console.log(localStorage)
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
   }, [todos])
 
