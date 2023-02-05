@@ -5,6 +5,8 @@ Simple app in React.js for listing tasks to do. Allows also to remove them once 
 
 ![image](https://user-images.githubusercontent.com/44364350/216838343-a483d228-0b86-4909-9ba3-401562e7b497.png)
 
+![image](https://user-images.githubusercontent.com/44364350/216838402-938f82dc-7370-4d3c-8dd5-3da3049a4744.png)
+
 
 ## Getting Started with ToDoList App
 
