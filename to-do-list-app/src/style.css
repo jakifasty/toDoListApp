@@ -1,0 +1,26 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to left, #800080, #FF0000);
+}
+
+.grid-calculator{
+    display: grid;
+    margin: 4pc;
+
+}
+
+.output{
+
+}
+
+.span-one{
+
+}
+
+.spand-two{
+
+}
