@@ -10,7 +10,7 @@ function App() {
   const [todos, setTodos] = useState([]) //useState returns an array of two elements; todos elements, setToDos is a function updating all the todos
   const todoNameRef = useRef()
 
-  //this loadEeffect reloads our Todos
+  //this loadEeffect reloads our Todos (storing)
   useEffect(() => {
     console.log(localStorage)
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
@@ -19,12 +19,18 @@ function App() {
     )}
   }, [])
 
-  //this allows to persist page reaload and keep local storage saved
+  //this allows to persist page reaload and keep local storage saved (adding todo to local storage)
   useEffect(() => {
     console.log(localStorage)
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
   }, [todos])
 
+  function toggleTodo(id) { //take id of the todo to toggle
+    const newTodosList = [...todos] //create copy as not good to change a state variable
+    const todo = newTodosList.find(todo => todo.id === id)
+    todos.commplete = !todo.commplete
+    setTodos(newTodosList)
+  }
   function handleAdd(e){
     const name = todoNameRef.current.value
     setTodos(prevTodos => {
@@ -39,7 +45,7 @@ function App() {
   
   return ( //ToDoList is a React embedded component
     <>
-      <ToDoList todos={todos} /> 
+      <ToDoList todos={todos} toggleTodo={toggleTodo}/> 
       <input style={{margin: 5}} ref={todoNameRef} type="text" />
       <button className='button-1' onClick={handleAdd}>Add</button>
       <button className='button-1' onClick={handleRemove}>Remove</button>
