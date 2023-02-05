@@ -27,8 +27,8 @@ function App() {
 
   function toggleTodo(id) { //take id of the todo to toggle
     const newTodosList = [...todos] //create copy as not good to change a state variable
-    const todo = newTodosList.find(todo => todo.id === id)
-    todos.commplete = !todo.commplete
+    const todo = newTodosList.find(todo => todo.id === id) //get 
+    todo.complete = !todo.complete
     setTodos(newTodosList)
   }
   function handleAdd(e){
@@ -39,8 +39,8 @@ function App() {
     todoNameRef.current.value = null //we remove the inputed value to the already set Todo
   }
 
-  function handleRemove(e) {
-    
+  function handleRemoveComplete(e) {
+
   }
   
   return ( //ToDoList is a React embedded component
@@ -48,8 +48,8 @@ function App() {
       <ToDoList todos={todos} toggleTodo={toggleTodo}/> 
       <input style={{margin: 5}} ref={todoNameRef} type="text" />
       <button className='button-1' onClick={handleAdd}>Add</button>
-      <button className='button-1' onClick={handleRemove}>Remove</button>
-      <div style={{margin: 10}}>0 left toDo's</div>
+      <button className='button-1' onClick={handleRemoveComplete}>Remove completed</button>
+      <div style={{margin: 10}}>{todos.filter(todo => !todo.complete).length} left toDo's</div>
     </>
 
   ); 
