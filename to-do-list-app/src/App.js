@@ -4,7 +4,7 @@ import './style.css'
 
 function App() {
 
-  const [todos, setTodos] = useState([{id: 1, name: 'Todo 1', compete: false}]) //useState returns an array of two elements; todos elements, setToDos is a function updating all the todos
+  const [todos, setTodos] = useState([]) //useState returns an array of two elements; todos elements, setToDos is a function updating all the todos
   return ( //ToDoList is a React embedded component
     <>
       <ToDoList todos={todos} /> 

@@ -9,7 +9,7 @@ export default function ToDoList({todos}) {
 
     return (
         todos.map(todo=> {
-            return <ToDo key={todo.id} todo={todo.name}/>
+            return <ToDo key={todo.id} todo={todo}/>
         })
     )
 }
