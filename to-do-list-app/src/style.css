@@ -9,18 +9,43 @@ body {
 
 .grid-calculator{
     display: grid;
-    margin: 4pc;
+    margin: pc;
 
 }
 
-.output{
-
+.input-box{
+    margin: 10px;
+    padding: 5px;
 }
 
-.span-one{
-
+.button-1{
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 1px 14px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
-.spand-two{
-
+.list-element{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: circle;
+    margin: 10px;
+    padding: 5px;
 }
