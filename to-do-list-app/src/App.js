@@ -1,35 +1,17 @@
+import React from 'react'
+import ToDoList from './ToDoList'
 import './style.css'
 
 function App() {
-  return (
-    <div className="grid-calculator">
-      <div className="output">
-        <div className="previous-operand"></div>
-        <div className="current-operand"></div>
-      </div>
-      <button className="span-two">AC</button>
-      <button className="span-one">DEL</button>
-      <button className="span-one">/</button>
+  return ( //ToDoList is a React embedded component
+    <>
+      <ToDoList /> 
+      <input type="text" />
+      <button>Add</button>
+      <button>Remove</button>
+      <div>0 left toDo's</div>
+    </>
 
-      <button className="span-one">1</button>
-      <button className="span-one">2</button>
-      <button className="span-one">3</button>
-      <button className="span-one">*</button>
-
-      <button className="span-one">4</button>
-      <button className="span-one">5</button>
-      <button className="span-one">6</button>
-      <button className="span-one">+</button>
-
-      <button className="span-one">7</button>
-      <button className="span-one">8</button>
-      <button className="span-one">9</button>
-      <button className="span-one">-</button>
-
-      <button className="span-one">.</button>
-      <button className="span-one">0</button>
-      <button className="span-two">=</button>
-    </div>
   );
 }
 
